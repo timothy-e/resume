@@ -16,6 +16,7 @@
 \usepackage[sfdefault]{roboto}
 \renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
+\usepackage{makecell}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -88,9 +89,14 @@
 
 % --- Heading --- %
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{\href{https://www.linkedin.com/in/timothy-e}{\LARGE Timothy Elgersma}} & \href{mailto:trelgersma@uwaterloo.ca}{trelgersma@uwaterloo.ca}\\
-    2B, University of Waterloo, Computer Science & \href{https://www.linkedin.com/in/timothy-e}{linkedin.com/in/timothy-e} \\
-    & \href{https://www.github.com/timothy-e}{github.com/timothy-e}  \\
+    \makecell[l]{
+        \textbf{\href{https://www.linkedin.com/in/timothy-e}{\Huge Timothy Elgersma}}\\
+        2B, University of Waterloo, Computer Science
+    } & \makecell[r]{
+        \href{mailto:trelgersma@uwaterloo.ca}{trelgersma@uwaterloo.ca}\\
+        \href{https://www.linkedin.com/in/timothy-e}{linkedin.com/in/timothy-e} \\
+        \href{https://www.github.com/timothy-e}{github.com/timothy-e}
+    }
 
 \end{tabular*}
 
@@ -99,9 +105,9 @@
 \section{Summary of Qualifications}
     \begin{resElement}
         \resBulletPoint[Languages]{C, C++, Java, Javascript (Coffeescript and Typescript), \LaTeX, Python, Scheme (Racket), SQL}
-        \resBulletPoint[Tools]{Android Studio, exposure to AWS S3 \& Route 53}
-        \resBulletPoint{Commended by managers for being a hardworking and dependable team member}
-        \resBulletPoint{Excellent verbal and written communication skills demonstrated through interaction with clients and coworkers}
+        \resBulletPoint[Tools]{Android Studio, AWS S3 \& Route 53, Git}
+        \resBulletPoint{Commended by managers for being a hardworking and dependable team member -- Encircle regularly forgot I was a coop student} % add examples
+        \resBulletPoint{Excellent communication skills demonstrated through documentation, peer mentorship, and team meetings}
         \resBulletPoint{Successful in teams and self-directed settings, as evidenced by solo and team projects}
     \end{resElement}
 
@@ -110,18 +116,18 @@
         \resItem
         {Software Developer}
         {Encircle}
-        {September -- December 2018}
+        {September 2018 -- December 2018}
     ]
-        \resBulletPoint{Designed, implemented, and tested Encircle's Moisture Mitigation report generator using Python and SQLAlchemy.}
-        \resBulletPoint{Mastered a PDF generating library and mentored a full time employee on that library}
+        \resBulletPoint{Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy}
+        \resBulletPoint{Mentored a full time employee on the usage of a PDF generating library}
         \resBulletPoint{Rewrote and refactored Coffeescript and Typescript mobile core to reduce bugs, increase coherency, and reflect new model changes}
-        \resBulletPoint{Designed a new server-side model traverser that properly respects the user's access control list}
+        \resBulletPoint{Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list}
     \end{resElement}
 
     \begin{resElement}[
         \resItem
         {Barback and Banquet Server}
-        {Eagles Nest}
+        {Eagles Nest Golf Club}
         {March 2016 -- August 2017}
     ]
         \resBulletPoint{Provided excellent customer service by anticipating and addressing guest's service needs}
@@ -147,12 +153,12 @@
         {January 2019}
     ]
         \resBulletPoint{Adds the course name as hover text to any University of Waterloo CS course code}
-        \resBulletPoint{Uses vanilla Javascript to parse Waterloo website and replace occurences on the current page}
+        \resBulletPoint{Uses Javascript to parse Waterloo website and replace occurences on the current page}
     \end{resElement}
 
     \begin{resElement}[
         \resItem
-        {Back-end Developer}
+        {Backend Developer}
         {Scavenger}
         {March 2018}
     ]
