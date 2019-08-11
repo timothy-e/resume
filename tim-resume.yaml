@@ -1,0 +1,113 @@
+about:
+  name: Tim Elgersma
+  contact:
+    email: trelgersma@uwaterloo.ca
+
+    linkedin:
+      url: https://www.linkedin.com/in/timothy-e
+      display: linkedin.com/in/timothy-e
+
+    github:
+      url: https://www.github.com/timothy-e
+      display: github.com/timothy-e
+
+  education:
+    degree:
+      long: Bachelor of Computer Science
+      short: Computer Science
+    term: 2B
+    school: University of Waterloo
+    start: September 2017
+    end: Present
+    coursework:
+      - CS 246 (Intro to Object Oriented Programming)
+      - CS 241 (Compilers)
+      - CS 240 (Data Structures and Algorithms)
+
+qualifications:
+  languages:
+    - C
+    - C++
+    - Dart
+    - Java
+    - Javascript
+    - Latex
+    - Python
+    - PostgresSQL
+    - Typescript
+
+  bullets:
+    - Commended by managers for being a hardworking and dependable team member -- Encircle regularly forgot I was a coop student
+    - Strong focus on testable code - every module I checked in had over 95\% test coverage
+    - Excellent communication skills demonstrated through documentation, peer mentorship, and team meetings
+    - Successful in teams and self-directed settings, as evidenced by solo and team projects
+
+experience:
+  - company: Genesys
+    title: Software Developer
+    start: May 2019
+    end: August 2019
+    bullets:
+      - Designed Genesys Conversation Provider's database access module}
+      - Implemented a persistent queue for asynchronous backend communication in Typescript}
+      - Updated Jenkins pipeline to support a Postgres database for simple integration tests}
+    hidden: False
+
+  - company: Encircle
+    title: Software Developer
+    start: September 2018
+    end: December 2018
+    bullets:
+      - Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy}
+      - Mentored a full time employee on the usage of a PDF generating library}
+      - Rewrote and refactored Coffeescript and Typescript mobile core to reduce bugs, increase coherency, and reflect new model changes}
+      - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list}
+    hidden: False
+
+  - company: Eagles Nest Golf Club
+    title: Barback and Banquet Server
+    start: March 2016
+    end: August 2017
+    bullets:
+      - Provided excellent customer service by anticipating and addressing guest's service needs
+      - Exceeded manager's expectations by working efficiently and skillfully, resulting in additional responsibilities
+    hidden: True
+
+  - company: Community Church of Richmond Hill
+    title: Graphic Designer and Camp Leader
+    start: June 2017
+    end: August 2017
+    bullets:
+      - Designed promotional materials to attract new members from the community using Adobe Illustrator, InDesign, and Photoshop, resulting in increased awareness of available programs}
+      - Developed and implemented weekly schedules, activities, and programming for camp groups}
+      - Demonstrated professional communication skills through interaction with clients}
+    hidden: False
+
+projects:
+  - name: Split
+    role: Backend Developer
+    start: January 2019
+    end: January 2019
+    bullets:
+      - \textbf{Split} is an Alexa based cost sharing apps designed to make living with roommates easier. }
+      - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda}
+    hidden: False
+
+  - name: Course Names
+    role: Chrome Extension
+    start: January 2019
+    end: January 2019
+    bullets:
+      - Adds the course name as hover text to any University of Waterloo CS course code}
+      - Uses Javascript to parse Waterloo website and replace occurences on the current page}
+    hidden: True
+
+  - name: Scavenger
+    role: Backend Developer
+    start: March 2018
+    end: March 2018
+    bullets:
+      - Created an Android application in which users can report littered areas that other users can clean for points}
+      - Manipulated and stored user data to allow access across app fragments in Java}
+      - Planned, designed, and programmed in a 5-person multi-discipline team in 24 hours at StarterHacks 2018}
+    hidden: False
