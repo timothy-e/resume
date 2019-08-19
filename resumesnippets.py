@@ -96,6 +96,19 @@ BEGIN_DOCUMENT = '\\begin{document}\n'
 END_DOCUMENT = '\\end{document}\n'
 
 
+def _print_education_bullets(term, degree, coursework):
+    yield Template("    \\resBulletPoint{Currently enrolled in $term of a $degree}\n").substitute(term=term, degree=degree)
+    yield Template("    \\resBulletPoint[Relevant coursework]{$coursework}\n").substitute(coursework=', '.join(coursework))
+
+def _print_bullets(bullets):
+    for bullet in bullets:
+        yield Template("    \\resBulletPoint{$bullet}\n").substitute(bullet=bullet)
+
+
+def start_section(section_name):
+    yield Template("\\section{$section_name}\n").substitute(section_name=section_name)
+
+
 def heading(
     *,
     name,
@@ -136,7 +149,7 @@ def heading(
     print('done heading')
 
 
-def summary_of_qualifications(*, languages, bullets):
+def summary_of_qualifications(*, languages, bullets, bullet_printer=_print_bullets):
     yield "\\section{Summary of Qualifications}\n"
     yield "    \\begin{resElement}\n"
 
@@ -144,12 +157,12 @@ def summary_of_qualifications(*, languages, bullets):
         languages=",".join(languages)
     )
 
-    yield from _print_bullets(bullets)
+    yield from bullet_printer(bullets)
 
     yield "    \\end{resElement}\n"
 
 
-def experience(*, company, title, start, end, bullets):
+def experience(*, company, title, start, end, bullets, bullet_printer=_print_bullets):
     date = f"{start} -- {end}" if start != end else start
 
     yield "    \\begin{resElement}[\n"
@@ -158,11 +171,19 @@ def experience(*, company, title, start, end, bullets):
     )
     yield '    ]\n'
 
-    yield from _print_bullets(bullets)
+    yield from bullet_printer(bullets)
 
     yield "    \\end{resElement}\n"
 
+def project(*, name, role, start, end, bullets, bullet_printer=_print_bullets):
+    yield from experience(company=name, title=role, start=start, end=end, bullets=bullets, bullet_printer=bullet_printer)
 
-def _print_bullets(bullets):
-    for bullet in bullets:
-        yield Template("    \\resBulletPoint{$bullet}\n").substitute(bullet=bullet)
+def education(*, degree, school, start, end, term, coursework):
+    yield from experience(
+        company=degree,
+        title=school,
+        start=start,
+        end=end,
+        bullets=[],
+        bullet_printer=lambda x: _print_education_bullets(term, degree, coursework)
+    )
