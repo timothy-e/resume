@@ -1,5 +1,5 @@
 about:
-  name: Tim Elgersma
+  name: Timothy Elgersma
   contact:
     email: trelgersma@uwaterloo.ca
 
@@ -18,11 +18,12 @@ about:
     term: 2B
     school: University of Waterloo
     start: September 2017
-    end: Present
+    end: April 2022
     coursework:
       - CS 246 (Intro to Object Oriented Programming)
-      - CS 241 (Compilers)
       - CS 240 (Data Structures and Algorithms)
+      - CS 341 (Algorithms II)
+      - CS 349 (User Interfaces)
 
 qualifications:
   languages:
@@ -37,7 +38,7 @@ qualifications:
     - Typescript
 
   bullets:
-    - Commended by managers for being a hardworking and dependable team member -- Encircle regularly forgot I was a coop student
+    - Commended by managers for being a hardworking and dependable team member
     - Strong focus on testable code - every module I checked in had over 95\% test coverage
     - Excellent communication skills demonstrated through documentation, peer mentorship, and team meetings
     - Successful in teams and self-directed settings, as evidenced by solo and team projects
@@ -48,9 +49,9 @@ experience:
     start: May 2019
     end: August 2019
     bullets:
-      - Designed Genesys Conversation Provider's database access module}
-      - Implemented a persistent queue for asynchronous backend communication in Typescript}
-      - Updated Jenkins pipeline to support a Postgres database for simple integration tests}
+      - Designed and documented Genesys Conversation Provider's database access module
+      - Implemented a persistent queue for asynchronous backend communication in Typescript
+      - Upgraded Jenkins pipeline to support a Postgres database for simple integration tests
     hidden: False
 
   - company: Encircle
@@ -58,10 +59,10 @@ experience:
     start: September 2018
     end: December 2018
     bullets:
-      - Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy}
-      - Mentored a full time employee on the usage of a PDF generating library}
-      - Rewrote and refactored Coffeescript and Typescript mobile core to reduce bugs, increase coherency, and reflect new model changes}
-      - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list}
+      - Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy
+      - Mentored a full time employee on the usage of a PDF generating library
+      - Rewrote and refactored Coffeescript and Typescript mobile core to reduce bugs, increase coherency, and reflect new model changes
+      - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
     hidden: False
 
   - company: Eagles Nest Golf Club
@@ -78,9 +79,9 @@ experience:
     start: June 2017
     end: August 2017
     bullets:
-      - Designed promotional materials to attract new members from the community using Adobe Illustrator, InDesign, and Photoshop, resulting in increased awareness of available programs}
-      - Developed and implemented weekly schedules, activities, and programming for camp groups}
-      - Demonstrated professional communication skills through interaction with clients}
+      - Designed promotional materials to attract new members from the community using Adobe Illustrator, InDesign, and Photoshop, resulting in increased awareness of available programs
+      - Developed and implemented weekly schedules, activities, and programming for camp groups
+      - Demonstrated professional communication skills through interaction with clients
     hidden: False
 
 projects:
@@ -89,8 +90,8 @@ projects:
     start: January 2019
     end: January 2019
     bullets:
-      - \textbf{Split} is an Alexa based cost sharing apps designed to make living with roommates easier. }
-      - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda}
+      - \textbf{Split} is an Alexa based cost sharing apps designed to make living with roommates easier.
+      - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda
     hidden: False
 
   - name: Course Names
@@ -98,8 +99,8 @@ projects:
     start: January 2019
     end: January 2019
     bullets:
-      - Adds the course name as hover text to any University of Waterloo CS course code}
-      - Uses Javascript to parse Waterloo website and replace occurences on the current page}
+      - Adds the course name as hover text to any University of Waterloo CS course code
+      - Uses Javascript to parse Waterloo website and replace occurences on the current page
     hidden: True
 
   - name: Scavenger
@@ -107,7 +108,7 @@ projects:
     start: March 2018
     end: March 2018
     bullets:
-      - Created an Android application in which users can report littered areas that other users can clean for points}
-      - Manipulated and stored user data to allow access across app fragments in Java}
-      - Planned, designed, and programmed in a 5-person multi-discipline team in 24 hours at StarterHacks 2018}
+      - Created an Android application in which users can report littered areas that other users can clean for points
+      - Manipulated and stored user data to allow access across app fragments in Java
+      - Planned, designed, and programmed in a 5-person multi-discipline team in 24 hours at StarterHacks 2018
     hidden: False

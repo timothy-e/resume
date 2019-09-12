@@ -32,7 +32,7 @@ def generate_lines():
             bullets=content["qualifications"]["bullets"],
         )
 
-        yield from resumesnippets.start_section('Experience')
+        yield from resumesnippets.start_section("Experience")
         for experience in content["experience"]:
             if not experience["hidden"]:
                 yield from resumesnippets.experience(
@@ -43,26 +43,26 @@ def generate_lines():
                     bullets=experience["bullets"],
                 )
 
-        yield from resumesnippets.start_section('Projects')
-        for project in content['projects']:
-            if not project['hidden']:
+        yield from resumesnippets.start_section("Projects")
+        for project in content["projects"]:
+            if not project["hidden"]:
                 yield from resumesnippets.project(
-                    name=project['name'],
-                    role=project['role'],
-                    start=project['start'],
-                    end=project['end'],
-                    bullets=project['bullets']
+                    name=project["name"],
+                    role=project["role"],
+                    start=project["start"],
+                    end=project["end"],
+                    bullets=project["bullets"],
                 )
 
-        yield from resumesnippets.start_section('Education')
-        edu = content['about']['education']
+        yield from resumesnippets.start_section("Education")
+        edu = content["about"]["education"]
         yield from resumesnippets.education(
-            degree=edu['degree']['long'],
-            school=edu['school'],
-            start=edu['start'],
-            end=edu['end'],
-            term=edu['term'],
-            coursework=edu['coursework']
+            degree=edu["degree"]["long"],
+            school=edu["school"],
+            start=edu["start"],
+            end=edu["end"],
+            term=edu["term"],
+            coursework=edu["coursework"],
         )
 
         yield resumesnippets.END_DOCUMENT
@@ -75,7 +75,7 @@ def write_file(file):
 
 
 if __name__ == "__main__":
-    file = Path(sys.argv[1]) or "resume.pdf"
+    file = Path(sys.argv[1])
     print(file)
     write_file(file)
 
