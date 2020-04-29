@@ -29,8 +29,8 @@ PACKAGES = r"""
 \renewcommand{\footrulewidth}{0pt}
 
 
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.37in}
+\addtolength{\evensidemargin}{-0.37in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
@@ -155,8 +155,6 @@ def heading(
     yield "\\end{tabular*}\n"
     yield "\\vspace{-3mm}\n"
 
-    print("done heading")
-
 
 def summary_of_qualifications(
     *, languages, bullets, bullet_printer=_print_bullets
@@ -165,7 +163,7 @@ def summary_of_qualifications(
     yield "    \\begin{resElement}\n"
 
     yield Template("    \\resBulletPoint[Languages]{$languages}\n").substitute(
-        languages=",".join(languages)
+        languages=", ".join(languages)
     )
 
     yield from bullet_printer(bullets)

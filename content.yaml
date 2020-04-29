@@ -15,7 +15,7 @@ about:
     degree:
       long: Bachelor of Computer Science
       short: Computer Science
-    term: 2B
+    term: 3B
     school: University of Waterloo
     start: September 2017
     end: April 2022
@@ -27,31 +27,40 @@ about:
 
 qualifications:
   languages:
-    - C
     - C++
     - Dart
     - Java
     - Javascript
+    - Kotlin
     - Latex
     - Python
-    - PostgresSQL
+    - SQL
     - Typescript
 
   bullets:
-    - Commended by managers for being a hardworking and dependable team member
+    - Commended by managers for being a hardworking, dependable, and flexible team member
     - Strong focus on testable code - every module I checked in had over 95\% test coverage
     - Excellent communication skills demonstrated through documentation, peer mentorship, and team meetings
-    - Successful in teams and self-directed settings, as evidenced by solo and team projects
 
 experience:
+  - company: Faire
+    title: Backend Developer
+    start: January 2020
+    end: April 2020
+    bullets:
+      - Increased Faire's contribution margin by 180bps by implementing payment assistance plans and allowing the risk team to make timely, informed decisions by surfacing relevant customer and Plaid data
+      - Decreased customer support ticket count by 9\% through heuristics to auto-handle common requests
+      - Reduced Faire's tax liability by 30\% by collecting retailer tax information
+    hidden: False
+
   - company: Genesys
     title: Software Developer
     start: May 2019
     end: August 2019
     bullets:
       - Designed and documented Genesys Conversation Provider's database access module
-      - Implemented a persistent queue for asynchronous backend communication in Typescript
-      - Upgraded Jenkins pipeline to support a Postgres database for simple integration tests
+      - Improved solution resiliency by implementing a persistent queue for asynchronous backend communication in Typescript
+      - Increased testability by upgrading Jenkins pipeline to include Postgres for simple integration tests
     hidden: False
 
   - company: Encircle
@@ -61,7 +70,7 @@ experience:
     bullets:
       - Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy
       - Mentored a full time employee on the usage of a PDF generating library
-      - Rewrote and refactored Coffeescript and Typescript mobile core to reduce bugs, increase coherency, and reflect new model changes
+      - Reduced bugs, increased coherency, and reflected new model changes by rewriting and refactoring Coffeescript and Typescript mobile core
       - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
     hidden: False
 
@@ -82,7 +91,7 @@ experience:
       - Designed promotional materials to attract new members from the community using Adobe Illustrator, InDesign, and Photoshop, resulting in increased awareness of available programs
       - Developed and implemented weekly schedules, activities, and programming for camp groups
       - Demonstrated professional communication skills through interaction with clients
-    hidden: False
+    hidden: True
 
 projects:
   - name: Split
