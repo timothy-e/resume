@@ -20,10 +20,10 @@ about:
     start: September 2017
     end: April 2022
     coursework:
-      - CS 246 (Intro to Object Oriented Programming)
       - CS 240 (Data Structures and Algorithms)
       - CS 341 (Algorithms II)
       - CS 349 (User Interfaces)
+      - CS 446 (Software Architecture)
 
 qualifications:
   languages:
