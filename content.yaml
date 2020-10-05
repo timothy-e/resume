@@ -15,24 +15,23 @@ about:
     degree:
       long: Bachelor of Computer Science
       short: Computer Science
-    term: 3B
+    term: 4A
     school: University of Waterloo
     start: September 2017
     end: April 2022
     coursework:
-      - CS 240 (Data Structures and Algorithms)
       - CS 341 (Algorithms II)
-      - CS 349 (User Interfaces)
+      # - CS 349 (User Interfaces)
       - CS 446 (Software Architecture)
+      - CS 458 (Security)
 
 qualifications:
   languages:
     - C++
-    - Dart
     - Java
     - Javascript
     - Kotlin
-    - Latex
+    - \LaTeX
     - Python
     - SQL
     - Typescript
@@ -43,6 +42,15 @@ qualifications:
     - Excellent communication skills demonstrated through documentation, peer mentorship, and team meetings
 
 experience:
+  - company: Huawei
+    title: Compiler Engineer
+    start: September 2020
+    end: December 2020
+    bullets:
+      - Dramatically reduced time-to-debug by automating the process of identifying the failing shader and optimization pass 
+      - Constructed a framework to compare compiler performance to build out a comprehensive GPU analysis suite
+    hidden: False
+
   - company: Faire
     title: Backend Developer
     start: January 2020
@@ -72,7 +80,7 @@ experience:
       - Mentored a full time employee on the usage of a PDF generating library
       - Reduced bugs, increased coherency, and reflected new model changes by rewriting and refactoring Coffeescript and Typescript mobile core
       - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
-    hidden: False
+    hidden: True
 
   - company: Eagles Nest Golf Club
     title: Barback and Banquet Server
@@ -94,12 +102,22 @@ experience:
     hidden: True
 
 projects:
+  - name: Crop Companion
+    role: Developer
+    start: June 2020
+    end: Present
+    bullets:
+      - Crop Companion is an Android app that generates a planting schedule for a balanced diet for a varying population
+      - Implemented and tested the calculations, and designed and some input screens
+      - Created for CS 446 (Software Architecture), and under development to be adapted for Thrive For Good 
+    hidden: False
+
   - name: Split
     role: Backend Developer
     start: January 2019
     end: January 2019
     bullets:
-      - \textbf{Split} is an Alexa based cost sharing apps designed to make living with roommates easier.
+      - Split is an Alexa based cost sharing apps designed to make living with roommates easier
       - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda
     hidden: False
 
@@ -120,4 +138,4 @@ projects:
       - Created an Android application in which users can report littered areas that other users can clean for points
       - Manipulated and stored user data to allow access across app fragments in Java
       - Planned, designed, and programmed in a 5-person multi-discipline team in 24 hours at StarterHacks 2018
-    hidden: False
+    hidden: True

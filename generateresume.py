@@ -43,7 +43,7 @@ def generate_lines():
                     bullets=experience["bullets"],
                 )
 
-        yield from resumesnippets.start_section("Personal Projects")
+        yield from resumesnippets.start_section("Projects")
         for project in content["projects"]:
             if not project["hidden"]:
                 yield from resumesnippets.project(

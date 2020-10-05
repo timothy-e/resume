@@ -98,7 +98,8 @@ END_DOCUMENT = "\\end{document}\n"
 
 def _print_education_bullets(term, degree, coursework):
     yield Template(
-        "    \\resBulletPoint{Currently enrolled in $term of a $degree}\n"
+        # "    \\resBulletPoint{Currently enrolled in $term of a $degree}\n"
+        "    \\resBulletPoint{Going into $term of a $degree}\n"
     ).substitute(term=term, degree=degree)
     yield Template(
         "    \\resBulletPoint[Relevant coursework]{$coursework}\n"
