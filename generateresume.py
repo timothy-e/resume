@@ -10,7 +10,6 @@ import os
 def generate_lines():
     with open("content.yaml") as f:
         content = yaml.load(f, Loader=yamlordereddictloader.Loader)
-        print(content["about"]["contact"].keys())
 
         yield resumesnippets.PACKAGES
         yield resumesnippets.COMMANDS
@@ -21,6 +20,7 @@ def generate_lines():
             program=content["about"]["education"]["degree"]["short"],
             school=content["about"]["education"]["school"],
             email=content["about"]["contact"]["email"],
+            phone=content["about"]["contact"]["phone"],
             linkedin_url=content["about"]["contact"]["linkedin"]["url"],
             linkedin=content["about"]["contact"]["linkedin"]["display"],
             github_url=content["about"]["contact"]["github"]["url"],

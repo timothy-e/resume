@@ -126,6 +126,7 @@ def heading(
     program,
     school,
     email,
+    phone,
     linkedin_url,
     linkedin,
     github_url,
@@ -145,12 +146,13 @@ def heading(
     yield Template("    \\href{mailto:$email}{$email}\\\\\n").substitute(
         email=email
     )
-    yield Template("    \\href{$linkedin_url}{$linkedin} \\\\\n").substitute(
+    yield Template("    \\href{$linkedin_url}{$linkedin}\\\\\n").substitute(
         linkedin_url=linkedin_url, linkedin=linkedin
     )
-    yield Template("    \\href{$github_url}{$github}\n").substitute(
+    yield Template("    \\href{$github_url}{$github}\\\\\n").substitute(
         github_url=github_url, github=github
     )
+    yield Template("    $phone").substitute(phone=phone)
     yield "}\n"
 
     yield "\\end{tabular*}\n"
