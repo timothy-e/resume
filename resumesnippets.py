@@ -5,6 +5,7 @@ PACKAGES = r"""
 \documentclass[letterpaper, 11pt]{article}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{mwe}
 \usepackage{latexsym}
 \usepackage{marvosym}
 \usepackage[usenames, dvipsnames]{color}
@@ -27,6 +28,19 @@ PACKAGES = r"""
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+    {5pt}%
+    {0.5pt}%
+    {\normalfont\Large\bfseries\headingbox}}
+\def\@seccntformat#1{} % no section numbers
+\makeatother
+
+\newcommand*{\headingbox}[1]{%
+    \noindent\colorbox{resBlue}{%
+        \parbox{\dimexpr\columnwidth-2\fboxsep\relax}{%
+        \textcolor{white}{#1}}}}
 
 
 \addtolength{\oddsidemargin}{-0.37in}
@@ -80,7 +94,7 @@ COMMANDS = r"""
 \newcommand{\resItem}[3]{
     \vspace{6pt}
     \styleDate{#3} \\
-    \stylePosition{#1}\styleEmployer{-- #2}
+    \stylePosition{#1}\styleEmployer{\textbullet\hspace{0.2em} #2}
 }
 
 \newenvironment{resElement}[1][]{

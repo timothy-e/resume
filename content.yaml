@@ -21,7 +21,7 @@ about:
     start: September 2017
     end: April 2022
     coursework:
-      - CS 341 (Algorithms II)
+      - CS 341 (Algorithms)
       # - CS 349 (User Interfaces)
       - CS 446 (Software Architecture)
       - CS 458 (Security)
@@ -78,10 +78,10 @@ experience:
     end: December 2018
     bullets:
       - Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy
-      - Mentored a full time employee on the usage of a PDF generating library
+      # - Mentored a full time employee on the usage of a PDF generating library
       - Reduced bugs, increased coherency, and reflected new model changes by rewriting and refactoring Coffeescript and Typescript mobile core
-      - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
-    hidden: True
+      # - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
+    hidden: False
 
   - company: Eagles Nest Golf Club
     title: Barback and Banquet Server
