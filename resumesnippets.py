@@ -18,8 +18,8 @@ PACKAGES = r"""
 \usepackage{fancyhdr}
 \usepackage[overload]{textcase}
 \usepackage[scaled]{helvet}
-\usepackage[sfdefault]{roboto}
-\renewcommand\familydefault{\sfdefault}
+% \usepackage[sfdefault]{roboto}
+% \renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 \usepackage{makecell}
 \usepackage{tabularx}
@@ -58,11 +58,10 @@ PACKAGES = r"""
 
 \titleformat{\section}{
     \vspace{-3pt}\titlerule\raggedright\LARGE\bfseries
-}{}{0em}{}[\color{black}\vspace{-2pt}\titlerule \vspace{-8pt}]
+}{}{0em}{}[\color{black}]
 
 \definecolor{resBlue}{HTML}{418AB3}
 \definecolor{resGray}{HTML}{595959}
-\definecolor{resLight}{HTML}{A2A2A2}
 """
 
 COMMANDS = r"""
@@ -70,8 +69,11 @@ COMMANDS = r"""
 %% My Commands %%
 %%%%%%%%%%%%%%%%%
 
+\renewcommand\labelitemi{{\Large\boldmath$\cdot$}}
+
+\newcommand{\cpp}{C\texttt{++}}
 \newcommand{\styleDate}[1]{
-    {{\color{resGray}\MakeTextUppercase{#1}}}
+    {{\color{resGray}#1}}
 }
 \newcommand{\styleDescription}[1]{
     {\color{resGray}#1}
@@ -84,7 +86,7 @@ COMMANDS = r"""
 }
 
 \newcommand{\styleLanguages}[1]{
-    {\color{resLight}\textit{#1}}
+    {\color{resBlue}#1}
 }
 
 \newcommand{\resBulletPoint}[2][]{
@@ -101,7 +103,7 @@ COMMANDS = r"""
     \vspace{6pt}
     \styleDate{#3} \\
     \begin{tabularx}{\textwidth}[t]{lXr}
-    \stylePosition{#1}\styleEmployer{\textbullet\hspace{0.2em} #2} & & \styleLanguages{#4}
+    \stylePosition{#1}\ifthenelse{\isempty{#2}}{}{\styleEmployer{|\hspace{0.2em} #2}} & & \styleLanguages{#4}
     \end{tabularx}
     \vspace{-14pt}
 }
@@ -186,6 +188,7 @@ def summary_of_qualifications(
     *, languages, bullets, bullet_printer=_print_bullets
 ):
     yield "\\section{Summary of Qualifications}\n"
+    yield "\\vspace{2mm}\n"
     yield "    \\begin{resElement}\n"
 
     yield Template("    \\resBulletPoint[Languages]{$languages}\n").substitute(
@@ -215,8 +218,8 @@ def experience(
 
 def project(*, name, role, start, end, bullets, languages, bullet_printer=_print_bullets):
     yield from experience(
-        company=name,
-        title=role,
+        company="",
+        title=name,
         start=start,
         end=end,
         bullets=bullets,

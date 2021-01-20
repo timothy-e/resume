@@ -28,7 +28,7 @@ about:
 
 qualifications:
   languages:
-    - C++
+    - \cpp
     - Java
     - Javascript
     - Kotlin
@@ -54,7 +54,7 @@ experience:
       - Combined several debug channels on a simulated device to rule out 80\% of previously identified failures
     languages:
       - Python
-      - C++
+      - \cpp
     hidden: False
 
   - company: Faire
