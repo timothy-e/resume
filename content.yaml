@@ -33,14 +33,16 @@ qualifications:
     - Javascript
     - Kotlin
     - \LaTeX
+    - OCaml
     - Python
     - SQL
+    - Scala
     - Typescript
 
   bullets:
     - Commended by managers for being a hardworking, dependable, and flexible team member
     - Strong focus on testable code - every module I checked in had over 95\% test coverage
-    - Excellent communication skills demonstrated through documentation, peer mentorship, and team meetings
+    - Excellent communication skills demonstrated through documentation, peer mentorship, presentations, and team meetings
 
 experience:
   - company: Huawei
@@ -48,8 +50,8 @@ experience:
     start: September 2020
     end: December 2020
     bullets:
-      - Dramatically reduced time-to-debug by automating the process of identifying the failing shader and optimization pass 
-      - Constructed a framework to compare compiler performance to build out a comprehensive GPU analysis suite
+      - Dramatically reduced time-to-debug by designing and implementing a script to identify the failing shader and optimization pass of an image generated with the Bisheng GPU compiler
+      - Combined several debug channels on a simulated device to rule out ~80\% of previously identified failures
     hidden: False
 
   - company: Faire
@@ -111,7 +113,16 @@ projects:
     bullets:
       - Crop Companion is an Android app that generates a planting schedule for a balanced diet for a varying population
       - Implemented and tested the calculations, and designed and some input screens
-      - Created for CS 446 (Software Architecture), and under development to be adapted for Thrive For Good 
+      - Created for CS 446 (Software Architecture), and under development to be adapted for Thrive For Good
+    hidden: False
+
+  - name: Joos Compiler
+    role: Developer
+    start: January 2021
+    end: April 2021
+    bullets:
+      - Compiles Joos 1W, a large subset of Java, directly into assembly for CS 444 (Compiler Construction)
+      - Designed and implemented scanning, parsing, analysis, and code generation in Scala
     hidden: False
 
   - name: Split
@@ -121,7 +132,7 @@ projects:
     bullets:
       - Split is an Alexa based cost sharing apps designed to make living with roommates easier
       - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda
-    hidden: False
+    hidden: True
 
   - name: Course Names
     role: Chrome Extension
