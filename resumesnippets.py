@@ -100,7 +100,7 @@ COMMANDS = r"""
 }
 
 \newcommand{\resItem}[4]{
-    \vspace{6pt}
+    \vspace{5pt}
     \styleDate{#3} \\
     \begin{tabularx}{\textwidth}[t]{lXr}
     \stylePosition{#1}\ifthenelse{\isempty{#2}}{}{\styleEmployer{|\hspace{0.2em} #2}} & & \styleLanguages{#4}
