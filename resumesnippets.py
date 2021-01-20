@@ -22,6 +22,7 @@ PACKAGES = r"""
 \renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 \usepackage{makecell}
+\usepackage{tabularx}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -61,6 +62,7 @@ PACKAGES = r"""
 
 \definecolor{resBlue}{HTML}{418AB3}
 \definecolor{resGray}{HTML}{595959}
+\definecolor{resLight}{HTML}{A2A2A2}
 """
 
 COMMANDS = r"""
@@ -81,6 +83,10 @@ COMMANDS = r"""
     {\Large{\textbf{\color{resBlue}#1}}}
 }
 
+\newcommand{\styleLanguages}[1]{
+    {\color{resLight}\textit{#1}}
+}
+
 \newcommand{\resBulletPoint}[2][]{
     \item\styleDescription{
         \ifthenelse
@@ -91,10 +97,13 @@ COMMANDS = r"""
     }
 }
 
-\newcommand{\resItem}[3]{
+\newcommand{\resItem}[4]{
     \vspace{6pt}
     \styleDate{#3} \\
-    \stylePosition{#1}\styleEmployer{\textbullet\hspace{0.2em} #2}
+    \begin{tabularx}{\textwidth}[t]{lXr}
+    \stylePosition{#1}\styleEmployer{\textbullet\hspace{0.2em} #2} & & \styleLanguages{#4}
+    \end{tabularx}
+    \vspace{-14pt}
 }
 
 \newenvironment{resElement}[1][]{
@@ -189,14 +198,14 @@ def summary_of_qualifications(
 
 
 def experience(
-    *, company, title, start, end, bullets, bullet_printer=_print_bullets
+    *, company, title, start, end, bullets, languages, bullet_printer=_print_bullets
 ):
     date = f"{start} -- {end}" if start != end else start
 
     yield "    \\begin{resElement}[\n"
     yield Template(
-        "\t\t\\resItem\n\t\t{$title}\n\t\t{$company}\n\t\t{$date}\n"
-    ).substitute(title=title, company=company, date=date)
+        "\t\t\\resItem\n\t\t{$title}\n\t\t{$company}\n\t\t{$date}\n\t\t{$languages}\n"
+    ).substitute(title=title, company=company, languages=', '.join(languages), date=date)
     yield "    ]\n"
 
     yield from bullet_printer(bullets)
@@ -204,13 +213,14 @@ def experience(
     yield "    \\end{resElement}\n"
 
 
-def project(*, name, role, start, end, bullets, bullet_printer=_print_bullets):
+def project(*, name, role, start, end, bullets, languages, bullet_printer=_print_bullets):
     yield from experience(
         company=name,
         title=role,
         start=start,
         end=end,
         bullets=bullets,
+        languages=languages,
         bullet_printer=bullet_printer,
     )
 
@@ -222,6 +232,7 @@ def education(*, degree, school, start, end, term, coursework):
         start=start,
         end=end,
         bullets=[],
+        languages=[],
         bullet_printer=lambda x: _print_education_bullets(
             term, degree, coursework
         ),

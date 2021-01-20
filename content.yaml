@@ -51,7 +51,10 @@ experience:
     end: December 2020
     bullets:
       - Dramatically reduced time-to-debug by designing and implementing a script to identify the failing shader and optimization pass of an image generated with the Bisheng GPU compiler
-      - Combined several debug channels on a simulated device to rule out ~80\% of previously identified failures
+      - Combined several debug channels on a simulated device to rule out 80\% of previously identified failures
+    languages:
+      - Python
+      - C++
     hidden: False
 
   - company: Faire
@@ -61,8 +64,11 @@ experience:
     bullets:
       - Increased Faire's contribution margin by 180bps by implementing payment assistance plans and allowing the risk team to make timely, informed decisions by surfacing relevant customer and Plaid data
       - Decreased customer support ticket count by 9\% through heuristics to auto-handle common requests
-      - Reduced Faire's tax liability by 30\% by collecting retailer tax information
+      # - Reduced Faire's tax liability by 30\% by collecting retailer tax information
       - Refactored customer invoices for correctness, clarity, and simplicity
+    languages:
+      - Kotlin
+      - PostgreSQL
     hidden: False
 
   - company: Genesys
@@ -71,8 +77,12 @@ experience:
     end: August 2019
     bullets:
       - Designed and documented Genesys Conversation Provider's database access module
-      - Improved solution resiliency by implementing a persistent queue for asynchronous backend communication in Typescript
+      - Improved solution resiliency by implementing a persistent queue for asynchronous backend communication
       - Increased testability by upgrading Jenkins pipeline to include Postgres for simple integration tests
+    languages:
+      - Typescript
+      - Javascript
+      - MySQL
     hidden: False
 
   - company: Encircle
@@ -84,7 +94,12 @@ experience:
       # - Mentored a full time employee on the usage of a PDF generating library
       - Reduced bugs, increased coherency, and reflected new model changes by rewriting and refactoring Coffeescript and Typescript mobile core
       # - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
-    hidden: True
+    languages:
+      - Python
+      - Java
+      - PostgreSQL
+      - \LaTeX
+    hidden: False
 
   - company: Eagles Nest Golf Club
     title: Barback and Banquet Server
@@ -114,6 +129,8 @@ projects:
       - Crop Companion is an Android app that generates a planting schedule for a balanced diet for a varying population
       - Implemented and tested the calculations, and designed and some input screens
       - Created for CS 446 (Software Architecture), and under development to be adapted for Thrive For Good
+    languages:
+      - Java
     hidden: False
 
   - name: Joos Compiler
@@ -123,6 +140,8 @@ projects:
     bullets:
       - Compiles Joos 1W, a large subset of Java, directly into assembly for CS 444 (Compiler Construction)
       - Designed and implemented scanning, parsing, analysis, and code generation in Scala
+    languages:
+      - Scala
     hidden: False
 
   - name: Split
@@ -132,6 +151,8 @@ projects:
     bullets:
       - Split is an Alexa based cost sharing apps designed to make living with roommates easier
       - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda
+    languages:
+      - Python
     hidden: True
 
   - name: Course Names

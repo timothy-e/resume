@@ -41,6 +41,7 @@ def generate_lines():
                     start=experience["start"],
                     end=experience["end"],
                     bullets=experience["bullets"],
+                    languages=experience["languages"],
                 )
 
         yield from resumesnippets.start_section("Projects")
@@ -52,6 +53,7 @@ def generate_lines():
                     start=project["start"],
                     end=project["end"],
                     bullets=project["bullets"],
+                    languages=project["languages"],
                 )
 
         yield from resumesnippets.start_section("Education")
@@ -86,4 +88,5 @@ if __name__ == "__main__":
 
     os.unlink(file.with_suffix(".aux"))
     os.unlink(file.with_suffix(".log"))
-    os.unlink(file.with_suffix(".tex"))
+    os.unlink(file.with_suffix(".out"))
+    # os.unlink(file.with_suffix(".tex"))
