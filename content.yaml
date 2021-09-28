@@ -28,11 +28,11 @@ about:
 
 qualifications:
   languages:
-    - \cpp
+    - C++
     - Java
     - Javascript
     - Kotlin
-    - \LaTeX
+    - LaTeX
     - Python
     - SQL
     - Scala
@@ -48,7 +48,7 @@ experience:
       - Updated YSQL grammar, cluster load balancer, and YSQL dumps to handle new tablespace features
     languages:
       - C
-      - \cpp
+      - C++
       - PostgreSQL
     hidden: False
 
@@ -57,7 +57,7 @@ experience:
     start: May 2021
     end: August 2021
     bullets:
-      - Designed, managed, and implemented a new API bridge that uses client configurable ``profiles" to efficiently handle two million requests per day across several clients and decrease latency by 15\%
+      - Designed, managed, and implemented a new API bridge that uses client configurable "profiles" to efficiently handle two million requests per day across several clients and decrease latency by 15%
       - Lead design discussions and involved stakeholders to ensure the highest standards for scalability, client customization, and enforcing invariants.
     languages:
       - Java
@@ -70,10 +70,10 @@ experience:
     end: December 2020
     bullets:
       - Dramatically reduced time-to-debug by designing and implementing a script to identify the failing shader and optimization pass of an image generated with the new Bisheng GPU compiler
-      - Combined several debug channels on a simulated device to rule out 80\% of potential root causes
+      - Combined several debug channels on a simulated device to rule out 80% of potential root causes
     languages:
       - Python
-      - \cpp
+      - C++
     hidden: False
 
   - company: Faire
@@ -82,8 +82,8 @@ experience:
     end: April 2020
     bullets:
       - Increased Faire's contribution margin by 180bps by implementing payment assistance plans and allowing the risk team to make timely, informed decisions by surfacing relevant customer and Plaid data
-      - Decreased customer support ticket count by 9\% through heuristics to auto-handle common requests
-      # - Reduced Faire's tax liability by 30\% by collecting retailer tax information
+      - Decreased customer support ticket count by 9% through heuristics to auto-handle common requests
+      # - Reduced Faire's tax liability by 30% by collecting retailer tax information
       - Refactored customer invoices for correctness, consistency across mediums, clarity, and simplicity
     languages:
       - Kotlin
@@ -117,7 +117,7 @@ experience:
       - Python
       - Java
       - PostgreSQL
-      - \LaTeX
+      - LaTeX
     hidden: True
 
   - company: Eagles Nest Golf Club
@@ -167,10 +167,10 @@ projects:
     start: January 2019
     end: Present
     bullets:
-      - Implemented a Python script and \LaTeX\ template to generate a resume from YAML
+      - Implemented a Python script and LaTeX template to generate a resume from YAML
     languages:
       - Python
-      - \LaTeX
+      - LaTeX
     hidden: False
 
   - name: Split

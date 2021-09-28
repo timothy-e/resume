@@ -5,11 +5,38 @@ import subprocess
 import sys
 from pathlib import Path
 import os
+import re
+
+
+def prepare_string(d):
+    if isinstance(d, str):
+        s = d.replace("C++", "\\cpp")
+        s = s.replace("c++", "\\cpp")
+        s = s.replace("%", "\\%")
+
+        s = re.sub(r'"(.*)"', r"``\1''", s) # replace quotes with LaTeX style quotes
+        s = re.sub(r'LaTeX', r'\\LaTeX\ ', s, flags=re.IGNORECASE)
+
+        return s
+    elif isinstance(d, dict):
+        for k, v in d.items():
+            d[k] = prepare_string(v)
+        return d
+    elif isinstance(d, list):
+        return [prepare_string(s) for s in d]
+    elif isinstance(d, bool):
+        return d
+    elif isinstance(d, int):
+        return d
+    else:
+        print("Unexpected item " + str(type(d)) + ", " + str(d))
+        raise Exception
 
 
 def generate_lines():
     with open("content.yaml") as f:
         content = yaml.load(f, Loader=yamlordereddictloader.Loader)
+        content = prepare_string(content)
 
         yield resumesnippets.PACKAGES
         yield resumesnippets.COMMANDS
