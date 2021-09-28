@@ -5,11 +5,38 @@ import subprocess
 import sys
 from pathlib import Path
 import os
+import re
+
+
+def prepare_string(d):
+    if isinstance(d, str):
+        s = d.replace("C++", "\\cpp")
+        s = s.replace("c++", "\\cpp")
+        s = s.replace("%", "\\%")
+
+        s = re.sub(r'"(.*)"', r"``\1''", s) # replace quotes with LaTeX style quotes
+        s = re.sub(r'LaTeX', r'\\LaTeX\ ', s, flags=re.IGNORECASE)
+
+        return s
+    elif isinstance(d, dict):
+        for k, v in d.items():
+            d[k] = prepare_string(v)
+        return d
+    elif isinstance(d, list):
+        return [prepare_string(s) for s in d]
+    elif isinstance(d, bool):
+        return d
+    elif isinstance(d, int):
+        return d
+    else:
+        print("Unexpected item " + str(type(d)) + ", " + str(d))
+        raise Exception
 
 
 def generate_lines():
     with open("content.yaml") as f:
         content = yaml.load(f, Loader=yamlordereddictloader.Loader)
+        content = prepare_string(content)
 
         yield resumesnippets.PACKAGES
         yield resumesnippets.COMMANDS
@@ -27,9 +54,19 @@ def generate_lines():
             github=content["about"]["contact"]["github"]["display"],
         )
 
-        yield from resumesnippets.summary_of_qualifications(
-            languages=content["qualifications"]["languages"],
-            bullets=content["qualifications"]["bullets"],
+        yield from resumesnippets.start_section("Education")
+        edu = content["about"]["education"]
+        yield from resumesnippets.education(
+            degree=edu["degree"]["long"],
+            school=edu["school"],
+            start=edu["start"],
+            end=edu["end"],
+            term=edu["term"],
+            coursework=edu["coursework"],
+        )
+
+        yield from resumesnippets.skills(
+            languages=content["qualifications"]["languages"]
         )
 
         yield from resumesnippets.start_section("Experience")
@@ -56,19 +93,7 @@ def generate_lines():
                     languages=project["languages"],
                 )
 
-        yield from resumesnippets.start_section("Education")
-        edu = content["about"]["education"]
-        yield from resumesnippets.education(
-            degree=edu["degree"]["long"],
-            school=edu["school"],
-            start=edu["start"],
-            end=edu["end"],
-            term=edu["term"],
-            coursework=edu["coursework"],
-        )
-
         yield resumesnippets.END_DOCUMENT
-
 
 def write_file(file):
     with open(file.with_suffix(".tex"), "w") as f:

@@ -1,7 +1,7 @@
 about:
   name: Timothy Elgersma
   contact:
-    email: trelgersma@uwaterloo.ca
+    email: timothy.elgersma@gmail.com
     phone: 416-728-4683
 
     linkedin:
@@ -16,7 +16,7 @@ about:
     degree:
       long: Bachelor of Computer Science
       short: Computer Science
-    term: 4A
+    term: 4B
     school: University of Waterloo
     start: September 2017
     end: April 2022
@@ -28,50 +28,70 @@ about:
 
 qualifications:
   languages:
-    - \cpp
+    - C++
     - Java
     - Javascript
     - Kotlin
-    - \LaTeX
-    - OCaml
+    - LaTeX
     - Python
     - SQL
     - Scala
     - Typescript
 
-  bullets:
-    - Commended by managers for being a dependable, productive, and adaptable team member
-    - Excellent communication skills demonstrated through documentation, peer mentorship, presentations, and team meetings
-
 experience:
+  - company: Yugabyte
+    title: Software Engineer Intern
+    start: September 2021
+    end: December 2021
+    bullets:
+      - Designed and implemented tablespaces for tablegroups to assign colocated tables to specified clouds, regions, and zones, allowing for row-level geo-partitioning
+      - Updated YSQL grammar, cluster load balancer, and YSQL dumps to handle new tablespace features
+    languages:
+      - C
+      - C++
+      - PostgreSQL
+    hidden: False
+
+  - company: Amazon
+    title: Software Developer Engineer Intern
+    start: May 2021
+    end: August 2021
+    bullets:
+      - Designed, managed, and implemented a new API bridge that uses client configurable "profiles" to efficiently handle two million requests per day across several clients and decrease latency by 15%
+      - Lead design discussions and involved stakeholders to ensure the highest standards for scalability, client customization, and enforcing invariants.
+    languages:
+      - Java
+      - Kotlin
+    hidden: False
+
   - company: Huawei
-    title: Compiler Engineer
+    title: Compiler Engineer Intern
     start: September 2020
     end: December 2020
     bullets:
-      - Dramatically reduced time-to-debug by designing and implementing a script to identify the failing shader and optimization pass of an image generated with the Bisheng GPU compiler
-      - Combined several debug channels on a simulated device to rule out 80\% of previously identified failures
+      - Dramatically reduced time-to-debug by designing and implementing a script to identify the failing shader and optimization pass of an image generated with the new Bisheng GPU compiler
+      - Combined several debug channels on a simulated device to rule out 80% of potential root causes
     languages:
       - Python
-      - \cpp
+      - C++
     hidden: False
 
   - company: Faire
-    title: Backend Developer
+    title: Backend Developer Intern
     start: January 2020
     end: April 2020
     bullets:
       - Increased Faire's contribution margin by 180bps by implementing payment assistance plans and allowing the risk team to make timely, informed decisions by surfacing relevant customer and Plaid data
-      - Decreased customer support ticket count by 9\% through heuristics to auto-handle common requests
-      # - Reduced Faire's tax liability by 30\% by collecting retailer tax information
-      - Refactored customer invoices for correctness, clarity, and simplicity
+      - Decreased customer support ticket count by 9% through heuristics to auto-handle common requests
+      # - Reduced Faire's tax liability by 30% by collecting retailer tax information
+      - Refactored customer invoices for correctness, consistency across mediums, clarity, and simplicity
     languages:
       - Kotlin
       - PostgreSQL
     hidden: False
 
   - company: Genesys
-    title: Software Developer
+    title: Software Developer Intern
     start: May 2019
     end: August 2019
     bullets:
@@ -82,10 +102,10 @@ experience:
       - Typescript
       - Javascript
       - MySQL
-    hidden: False
+    hidden: True
 
   - company: Encircle
-    title: Software Developer
+    title: Software Developer Intern
     start: September 2018
     end: December 2018
     bullets:
@@ -97,8 +117,8 @@ experience:
       - Python
       - Java
       - PostgreSQL
-      - \LaTeX
-    hidden: False
+      - LaTeX
+    hidden: True
 
   - company: Eagles Nest Golf Club
     title: Barback and Banquet Server
@@ -147,10 +167,10 @@ projects:
     start: January 2019
     end: Present
     bullets:
-      - Implemented a Python script and \LaTeX\ template to generate a resume from YAML
+      - Implemented a Python script and LaTeX template to generate a resume from YAML
     languages:
       - Python
-      - \LaTeX
+      - LaTeX
     hidden: False
 
   - name: Split
