@@ -128,7 +128,7 @@ END_DOCUMENT = "\\end{document}\n"
 def _print_education_bullets(term, degree, coursework):
     yield Template(
         # "    \\resBulletPoint{Currently enrolled in $term of a $degree}\n"
-        "    \\resBulletPoint{Going into $term of a $degree}\n"
+        "    \\resBulletPoint{Entering $term of a $degree}\n"
     ).substitute(term=term, degree=degree)
     yield Template(
         "    \\resBulletPoint[Relevant coursework]{$coursework}\n"
@@ -202,8 +202,13 @@ def experience(
 
     yield "    \\begin{resElement}[\n"
     yield Template(
-        "\t\t\\resItem\n\t\t{$title}\n\t\t{$company}\n\t\t{$date}\n\t\t{$languages}\n"
-    ).substitute(title=title, company=company, languages=', '.join(languages), date=date)
+        "\t\t\\resItem\n\t\t{$big_text}\n\t\t{$small_text}\n\t\t{$date}\n\t\t{$languages}\n"
+    ).substitute(
+        big_text=company if company else title,
+        small_text=title if company else company,
+        languages=', '.join(languages),
+        date=date
+    )
     yield "    ]\n"
 
     yield from bullet_printer(bullets)
@@ -225,8 +230,8 @@ def project(*, name, role, start, end, bullets, languages, bullet_printer=_print
 
 def education(*, degree, school, start, end, term, coursework):
     yield from experience(
-        company=degree,
-        title=school,
+        company=school,
+        title=degree,
         start=start,
         end=end,
         bullets=[],
