@@ -44,8 +44,11 @@ experience:
     start: September 2021
     end: December 2021
     bullets:
-      - Designed and implemented tablespaces for tablegroups to assign colocated tables to specified clouds, regions, and zones, allowing for row-level geo-partitioning
-      - Updated YSQL grammar, cluster load balancer, and YSQL dumps to handle new tablespace features
+      - Designed and implemented tablespaces for tablegroups to assign
+        colocated tables to specified clouds, regions, and zones, allowing
+        for row-level geo-partitioning
+      - Updated YSQL grammar, cluster load balancer, and YSQL dumps to handle
+        new tablespace features
     languages:
       - C
       - C++
@@ -57,8 +60,13 @@ experience:
     start: May 2021
     end: August 2021
     bullets:
-      - Designed, managed, and implemented a new API bridge that uses client configurable "profiles" to efficiently handle two million requests per day across several clients and decrease latency by 15%
-      - Lead design discussions and involved stakeholders to ensure the highest standards for scalability, client customization, and enforcing invariants.
+      - Designed and implemented a new API bridge that uses client configurable
+        "profiles" to efficiently handle two million requests per day across
+        several clients, decrease latency by 15%, and reduce operational
+        complexity
+      - Lead design discussions with a variety of stakeholders to ensure the
+        highest standards for scalability, client customization, and enforcing
+        invariants.
     languages:
       - Java
       - Kotlin
@@ -69,8 +77,11 @@ experience:
     start: September 2020
     end: December 2020
     bullets:
-      - Dramatically reduced time-to-debug by designing and implementing a script to identify the failing shader and optimization pass of an image generated with the new Bisheng GPU compiler
-      - Combined several debug channels on a simulated device to rule out 80% of potential root causes
+      - Dramatically reduced time-to-debug by designing and implementing a
+        script to identify the failing shader and optimization pass of an image
+        generated with the new Bisheng GPU compiler
+      - Combined several debug channels on a simulated device to rule out 80%
+        of potential root causes
     languages:
       - Python
       - C++
@@ -81,10 +92,15 @@ experience:
     start: January 2020
     end: April 2020
     bullets:
-      - Increased Faire's contribution margin by 180bps by implementing payment assistance plans and allowing the risk team to make timely, informed decisions by surfacing relevant customer and Plaid data
-      - Decreased customer support ticket count by 9% through heuristics to auto-handle common requests
-      # - Reduced Faire's tax liability by 30% by collecting retailer tax information
-      - Refactored customer invoices for correctness, consistency across mediums, clarity, and simplicity
+      - Increased Faire's contribution margin by 180bps by implementing payment
+        assistance plans and allowing the risk team to make timely, informed
+        decisions by surfacing relevant customer and Plaid data
+      - Decreased customer support ticket count by 9% through heuristics to
+        auto-handle common requests
+      # - Reduced Faire's tax liability by 30% by collecting retailer tax
+      #   information
+      - Refactored customer invoices for correctness, consistency across
+        mediums, clarity, and simplicity
     languages:
       - Kotlin
       - PostgreSQL
@@ -95,9 +111,12 @@ experience:
     start: May 2019
     end: August 2019
     bullets:
-      - Designed and documented Genesys Conversation Provider's database access module
-      - Improved solution resiliency by implementing a persistent queue for asynchronous backend communication
-      # - Increased testability by upgrading Jenkins pipeline to include Postgres for simple integration tests
+      - Designed and documented Genesys Conversation Provider's database access
+        module
+      - Improved solution resiliency by implementing a persistent queue for
+        asynchronous backend communication
+      # - Increased testability by upgrading Jenkins pipeline to include
+      #   Postgres for simple integration tests
     languages:
       - Typescript
       - Javascript
@@ -109,10 +128,14 @@ experience:
     start: September 2018
     end: December 2018
     bullets:
-      - Designed and implemented Encircle's Moisture Mitigation report generator using Python and SQLAlchemy
-      # - Mentored a full time employee on the usage of a PDF generating library
-      - Reduced bugs, increased coherency, and reflected new model changes by rewriting and refactoring Coffeescript and Typescript mobile core
-      # - Designed a new server-side model traverser with SQLAlchemy that respects the user's access control list
+      - Designed and implemented Encircle's Moisture Mitigation report generator
+        using Python and SQLAlchemy
+      # - Mentored a full time employee on the usage of a PDF generating
+      #   library
+      - Reduced bugs, increased coherency, and reflected new model changes by
+        rewriting and refactoring Coffeescript and Typescript mobile core
+      # - Designed a new server-side model traverser with SQLAlchemy that
+      #   respects the user's access control list
     languages:
       - Python
       - Java
@@ -125,8 +148,10 @@ experience:
     start: March 2016
     end: August 2017
     bullets:
-      - Provided excellent customer service by anticipating and addressing guest's service needs
-      - Exceeded manager's expectations by working efficiently and skillfully, resulting in additional responsibilities
+      - Provided excellent customer service by anticipating and addressing
+        guest's service needs
+      - Exceeded manager's expectations by working efficiently and skillfully,
+        resulting in additional responsibilities
     hidden: True
 
   - company: Community Church of Richmond Hill
@@ -145,8 +170,10 @@ projects:
     start: January 2021
     end: April 2021
     bullets:
-      - Compiles Joos 1W, a large subset of Java, directly into assembly for CS 444 (Compiler Construction)
-      - Designed and implemented scanning, parsing, analysis, and code generation in Scala
+      - Compiles Joos 1W, a large subset of Java, directly into assembly for CS
+        444 (Compiler Construction)
+      - Designed and implemented scanning, parsing, analysis, and code
+        generation in Scala
     languages:
       - Scala
     hidden: False
@@ -156,8 +183,10 @@ projects:
     start: June 2020
     end: September 2020
     bullets:
-      - Created an Android app that generates a planting schedule for a balanced diet for a varying population
-      - Implemented and tested the calculations, and designed and implemented various input screens
+      - Created an Android app that generates a planting schedule for a
+        balanced diet for a varying population
+      - Implemented and tested the calculations, and designed and implemented
+        various input screens
     languages:
       - Java
     hidden: False
@@ -167,7 +196,8 @@ projects:
     start: January 2019
     end: Present
     bullets:
-      - Implemented a Python script and LaTeX template to generate a resume from YAML
+      - Implemented a Python script and LaTeX template to generate a resume
+       from YAML
     languages:
       - Python
       - LaTeX
@@ -178,8 +208,10 @@ projects:
     start: January 2019
     end: January 2019
     bullets:
-      - Split is an Alexa based cost sharing apps designed to make living with roommates easier
-      - Built a RESTful API with Flask hosted in a Digital Ocean droplet to handle requests made from AWS Lambda
+      - Split is an Alexa based cost sharing apps designed to make living with
+        roommates easier
+      - Built a RESTful API with Flask hosted in a Digital Ocean droplet to
+        handle requests made from AWS Lambda
     languages:
       - Python
     hidden: True
@@ -189,8 +221,10 @@ projects:
     start: January 2019
     end: January 2019
     bullets:
-      - Adds the course name as hover text to any University of Waterloo CS course code
-      - Uses Javascript to parse Waterloo website and replace occurences on the current page
+      - Adds the course name as hover text to any University of Waterloo CS
+        course code
+      - Uses Javascript to parse Waterloo website and replace occurences on the
+        current page
     hidden: True
 
   - name: Scavenger
@@ -198,7 +232,10 @@ projects:
     start: March 2018
     end: March 2018
     bullets:
-      - Created an Android application in which users can report littered areas that other users can clean for points
-      - Manipulated and stored user data to allow access across app fragments in Java
-      - Planned, designed, and programmed in a 5-person multi-discipline team in 24 hours at StarterHacks 2018
+      - Created an Android application in which users can report littered areas
+        that other users can clean for points
+      - Manipulated and stored user data to allow access across app fragments
+        in Java
+      - Planned, designed, and programmed in a 5-person multi-discipline team
+        in 24 hours at StarterHacks 2018
     hidden: True
