@@ -1,0 +1,17 @@
+backports.entry-points-selectable==1.1.0
+configparser==4.0.2
+contextlib2==0.6.0.post1
+distlib==0.3.2
+filelock==3.0.12
+importlib-metadata==2.1.1
+importlib-resources==3.3.1
+pathlib2==2.3.6
+platformdirs==2.0.2
+psutil==5.8.0
+PyYAML==5.4.1
+scandir==1.10.0
+singledispatch==3.7.0
+six==1.16.0
+typing==3.10.0.0
+virtualenv==20.8.0
+zipp==1.2.0
