@@ -40,7 +40,7 @@ PACKAGES = r"""
 
 \newcommand*{\headingbox}[1]{%
     \noindent\colorbox{resBlue}{%
-        \parbox{\dimexpr\columnwidth-2\fboxsep\relax}{%
+        \parbox[c][5mm]{\dimexpr\columnwidth-2\fboxsep\relax}{%
         \textcolor{white}{#1}}}}
 
 
@@ -99,6 +99,10 @@ COMMANDS = r"""
     }
 }
 
+\newcommand{\resDot}{
+    \hspace{2mm}\color{resBlue}$\bullet$\color{resGray}\hspace{2mm}
+}
+
 \newcommand{\resItem}[4]{
     \vspace{5pt}
     \styleDate{#3} \\
@@ -123,8 +127,8 @@ END_DOCUMENT = "\\end{document}\n"
 
 def _print_education_bullets(term, degree, coursework):
     yield Template(
-        "    \\resBulletPoint{Currently enrolled in $term of a $degree}\n"
-        # "    \\resBulletPoint{Going into $term of a $degree}\n"
+        # "    \\resBulletPoint{Currently enrolled in $term of a $degree}\n"
+        "    \\resBulletPoint{Going into $term of a $degree}\n"
     ).substitute(term=term, degree=degree)
     yield Template(
         "    \\resBulletPoint[Relevant coursework]{$coursework}\n"
@@ -184,20 +188,11 @@ def heading(
     yield "\\vspace{-3mm}\n"
 
 
-def summary_of_qualifications(
-    *, languages, bullets, bullet_printer=_print_bullets
-):
-    yield "\\section{Summary of Qualifications}\n"
+def skills(*, languages):
+    yield "\\section{Skills}\n"
     yield "\\vspace{2mm}\n"
-    yield "    \\begin{resElement}\n"
-
-    yield Template("    \\resBulletPoint[Languages]{$languages}\n").substitute(
-        languages=", ".join(languages)
-    )
-
-    yield from bullet_printer(bullets)
-
-    yield "    \\end{resElement}\n"
+    yield "\\color{resGray}\n"
+    yield "\\resDot ".join(languages)
 
 
 def experience(

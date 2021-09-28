@@ -27,9 +27,19 @@ def generate_lines():
             github=content["about"]["contact"]["github"]["display"],
         )
 
-        yield from resumesnippets.summary_of_qualifications(
-            languages=content["qualifications"]["languages"],
-            bullets=content["qualifications"]["bullets"],
+        yield from resumesnippets.start_section("Education")
+        edu = content["about"]["education"]
+        yield from resumesnippets.education(
+            degree=edu["degree"]["long"],
+            school=edu["school"],
+            start=edu["start"],
+            end=edu["end"],
+            term=edu["term"],
+            coursework=edu["coursework"],
+        )
+
+        yield from resumesnippets.skills(
+            languages=content["qualifications"]["languages"]
         )
 
         yield from resumesnippets.start_section("Experience")
@@ -56,19 +66,7 @@ def generate_lines():
                     languages=project["languages"],
                 )
 
-        yield from resumesnippets.start_section("Education")
-        edu = content["about"]["education"]
-        yield from resumesnippets.education(
-            degree=edu["degree"]["long"],
-            school=edu["school"],
-            start=edu["start"],
-            end=edu["end"],
-            term=edu["term"],
-            coursework=edu["coursework"],
-        )
-
         yield resumesnippets.END_DOCUMENT
-
 
 def write_file(file):
     with open(file.with_suffix(".tex"), "w") as f:
