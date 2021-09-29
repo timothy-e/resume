@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%
+%% My Commands %%
+%%%%%%%%%%%%%%%%%
+
+\renewcommand\labelitemi{{\Large\boldmath$\cdot$}}
+
+\newcommand{\cpp}{C\texttt{++}}
+\newcommand{\styleDate}[1]{
+    {{\color{resGray}#1}}
+}
+\newcommand{\styleDescription}[1]{
+    {\color{resGray}#1}
+}
+\newcommand{\styleEmployer}[1]{
+    {\Large{\color{resGray}#1}}
+}
+\newcommand{\stylePosition}[1]{
+    {\Large{\textbf{\color{resBlue}#1}}}
+}
+
+\newcommand{\styleLanguages}[1]{
+    {\color{resBlue}#1}
+}
+
+\newcommand{\resBulletPoint}[2][]{
+    \item\styleDescription{
+        \ifthenelse
+            {\isempty{#1}}
+            {}
+            {\textbf{#1}: }
+        #2
+    }
+}
+
+\newcommand{\resDot}{
+    \hspace{2mm}\color{resBlue}$\bullet$\color{resGray}\hspace{2mm}
+}
+
+\newcommand{\resItem}[4]{
+    \vspace{5pt}
+    \styleDate{#3} \\
+    \begin{tabularx}{\textwidth}[t]{lXr}
+    \stylePosition{#1}\ifthenelse{\isempty{#2}}{}{\styleEmployer{|\hspace{0.2em} #2}} & & \styleLanguages{#4}
+    \end{tabularx}
+    \vspace{-14pt}
+}
+
+\newenvironment{resElement}[1][]{
+    #1
+    \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+}{
+    \end{itemize}
+}
+%%%%%%%%%%%%%%%%

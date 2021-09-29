@@ -38,8 +38,14 @@ def generate_lines():
         content = yaml.load(f, Loader=yamlordereddictloader.Loader)
         content = prepare_string(content)
 
-        yield resumesnippets.PACKAGES
-        yield resumesnippets.COMMANDS
+        with open ("packages.tex", "r") as packages:
+            yield from packages.readlines()
+
+        yield "\n"
+
+        with open ("commands.tex", "r") as commands:
+            yield from commands.readlines()
+
         yield resumesnippets.BEGIN_DOCUMENT
         yield from resumesnippets.heading(
             name=content["about"]["name"],
