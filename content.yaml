@@ -44,9 +44,9 @@ experience:
     start: September 2021
     end: December 2021
     bullets:
-      - Designed and implemented tablespaces for tablegroups to assign
-        colocated tables to specified clouds, regions, and zones, allowing
-        for row-level geo-partitioning
+      - Enabled row-level geo-partitioning across clouds, regions, and zones by
+        designing and implementing tablespaces for tablegroups (collections of
+        colocated tables)
       - Updated YSQL grammar, cluster load balancer, and YSQL dumps to handle
         new tablespace features
     languages:
@@ -60,10 +60,9 @@ experience:
     start: May 2021
     end: August 2021
     bullets:
-      - Designed and implemented a new API bridge that uses client configurable
-        "profiles" to efficiently handle two million requests per day across
-        several clients, decrease latency by 15%, and reduce operational
-        complexity
+      - Decreased latency by 15% and operational complexity for two million
+        requests per day by designing and implementing a new API bridge that
+        uses client configurable "profiles"
       - Lead design discussions with a variety of stakeholders to ensure the
         highest standards for scalability, client customization, and enforcing
         invariants.
@@ -80,8 +79,8 @@ experience:
       - Dramatically reduced time-to-debug by designing and implementing a
         script to identify the failing shader and optimization pass of an image
         generated with the new Bisheng GPU compiler
-      - Combined several debug channels on a simulated device to rule out 80%
-        of potential root causes
+      - Ruled out 80% of potential root causes by combining several debug
+        channels on a simulated device
     languages:
       - Python
       - C++
