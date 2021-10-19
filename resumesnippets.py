@@ -61,7 +61,7 @@ def heading(
     yield Template("    \\href{$github_url}{$github}\\\\\n").substitute(
         github_url=github_url, github=github
     )
-    yield Template("    $phone").substitute(phone=phone)
+    yield Template("    \phonenumber{$phone}").substitute(phone=phone)
     yield "}\n"
 
     yield "\\end{tabular*}\n"
