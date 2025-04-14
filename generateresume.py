@@ -58,17 +58,6 @@ def generate_lines():
             github=content["about"]["contact"]["github"]["display"],
         )
 
-        yield from resumesnippets.start_section("Education")
-        edu = content["about"]["education"]
-        yield from resumesnippets.education(
-            degree=edu["degree"]["long"],
-            school=edu["school"],
-            start=edu["start"],
-            end=edu["end"],
-            term=edu["term"],
-            coursework=edu["coursework"],
-        )
-
         yield from resumesnippets.skills(
             languages=content["qualifications"]["languages"]
         )
@@ -96,6 +85,16 @@ def generate_lines():
                     bullets=project["bullets"],
                     languages=project["languages"],
                 )
+
+        yield from resumesnippets.start_section("Education")
+        edu = content["about"]["education"]
+        yield from resumesnippets.education(
+            degree=edu["degree"]["long"],
+            school=edu["school"],
+            start=edu["start"],
+            end=edu["end"],
+            coursework=edu["coursework"],
+        )
 
         yield resumesnippets.END_DOCUMENT
 
