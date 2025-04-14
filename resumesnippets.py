@@ -5,11 +5,7 @@ BEGIN_DOCUMENT = "\\begin{document}\n"
 END_DOCUMENT = "\\end{document}\n"
 
 
-def _print_education_bullets(term, degree, coursework):
-    yield Template(
-        # "    \\resBulletPoint{Currently enrolled in $term of a $degree}\n"
-        "    \\resBulletPoint{Entering $term of a $degree}\n"
-    ).substitute(term=term, degree=degree)
+def _print_education_bullets(degree, coursework):
     yield Template(
         "    \\resBulletPoint[Relevant coursework]{$coursework}\n"
     ).substitute(coursework=", ".join(coursework))
@@ -31,9 +27,7 @@ def start_section(section_name):
 def heading(
     *,
     name,
-    term,
-    program,
-    school,
+    tagline,
     email,
     phone,
     linkedin_url,
@@ -46,9 +40,7 @@ def heading(
     yield Template(
         "\\textbf{\\href{$linkedin_url}{\\Huge $name}}\\\\\n"
     ).substitute(linkedin_url=linkedin_url, name=name)
-    yield "    {term}, {school}, {program}\n".format(
-        term=term, school=school, program=program
-    )
+    yield f"    {tagline}\n"
 
     yield "} & \\makecell[r]{\n"
 
@@ -108,7 +100,7 @@ def project(*, name, role, start, end, bullets, languages, bullet_printer=_print
     )
 
 
-def education(*, degree, school, start, end, term, coursework):
+def education(*, degree, school, start, end, coursework):
     yield from experience(
         company=school,
         title=degree,
@@ -117,6 +109,6 @@ def education(*, degree, school, start, end, term, coursework):
         bullets=[],
         languages=[],
         bullet_printer=lambda x: _print_education_bullets(
-            term, degree, coursework
+            degree, coursework
         ),
     )

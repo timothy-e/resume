@@ -49,9 +49,7 @@ def generate_lines():
         yield resumesnippets.BEGIN_DOCUMENT
         yield from resumesnippets.heading(
             name=content["about"]["name"],
-            term=content["about"]["education"]["term"],
-            program=content["about"]["education"]["degree"]["short"],
-            school=content["about"]["education"]["school"],
+            tagline=content["about"]["tagline"],
             email=content["about"]["contact"]["email"],
             phone=content["about"]["contact"]["phone"],
             linkedin_url=content["about"]["contact"]["linkedin"]["url"],

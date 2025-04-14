@@ -12,11 +12,12 @@ about:
       url: https://www.github.com/timothy-e
       display: github.com/timothy-e
 
+  tagline: Database Engineer
+
   education:
     degree:
       long: Bachelor of Computer Science
       short: Computer Science
-    term: 4B
     school: University of Waterloo
     start: September 2017
     end: April 2022
@@ -24,6 +25,7 @@ about:
       - CS 341 (Algorithms)
       - CS 446 (Software Architecture)
       - CS 458 (Security)
+      - IN 4331 (Web-scale Data Management)
 
 qualifications:
   languages:
