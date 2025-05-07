@@ -159,7 +159,7 @@ projects:
       - Implemented and tested the calculations, and designed and implemented various input screens
     languages:
       - Java
-    hidden: False
+    hidden: True
 
   - name: Resume Creator
     role: Developer
