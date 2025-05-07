@@ -32,15 +32,32 @@ qualifications:
     - C
     - C++
     - Java
-    - Javascript
     - Kotlin
     - LaTeX
     - Python
-    - SQL
-    - Scala
-    - Typescript
+    - PostgreSQL
 
 experience:
+  - company: Yugabyte
+    title: Software Engineer
+    start: September 2022
+    end: Present
+    bullets:
+     - Enabled fully online major version upgrades across Postgres versions. Supported remote filter pushdown between versions
+     - Designed and implemented distributed SQL support for Postgres's bitmap scans. Blog post yugabyte.com/blog/bitmap-scans-on-distributed-postgresql/
+     - Implemented yb\_terminated\_queries, a new sql view to provide observability into abruptly terminated queries
+     - Implemented login profiles to improve security by limiting the number of login attempts a user can make
+     - Decreased response size by 25% by refactoring column target rules
+     - Reduced query latencies by up to 60% for queries with large columns by optimizing memory tracking calls
+     - Reduced memory usage by 60-95% on write queries affecting large numbers of rows
+     - Debugged and fixed a variety of stability issues caused by the kernel's Out of Memory killer
+     - Fixed a variety of correctness issues in the query execution engine
+    languages:
+      - C
+      - C++
+      - PostgreSQL
+    hidden: False
+
   - company: Yugabyte
     title: Software Engineer Intern
     start: September 2021
@@ -76,7 +93,7 @@ experience:
     languages:
       - Python
       - C++
-    hidden: False
+    hidden: True
 
   - company: Faire
     title: Backend Developer Intern
