@@ -61,10 +61,10 @@ def heading(
 
 
 def skills(*, languages):
-    yield "\\section{Skills}\n"
+    yield "\\section{Languages}\n"
     yield "\\vspace{2mm}\n"
     yield "\\color{resGray}\n"
-    yield "\\resDot ".join(languages)
+    yield "\\hfill \\resDot \\hfill ".join(languages)
 
 
 def experience(
