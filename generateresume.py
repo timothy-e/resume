@@ -92,8 +92,7 @@ def generate_lines():
             degree=edu["degree"]["long"],
             school=edu["school"],
             start=edu["start"],
-            end=edu["end"],
-            coursework=edu["coursework"],
+            end=edu["end"]
         )
 
         yield resumesnippets.END_DOCUMENT

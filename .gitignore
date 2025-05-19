@@ -8,4 +8,5 @@
 *.gz
 *.pyc
 *.DS_Store
+*.tex
 .vscode

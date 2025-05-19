@@ -72,7 +72,9 @@ def experience(
 ):
     date = f"{start} -- {end}" if start != end else start
 
-    yield "    \\begin{resElement}[\n"
+    if bullet_printer:
+        yield "    \\begin{resElement}[\n"
+
     yield Template(
         "\t\t\\resItem\n\t\t{$big_text}\n\t\t{$small_text}\n\t\t{$date}\n\t\t{$languages}\n"
     ).substitute(
@@ -81,11 +83,11 @@ def experience(
         languages=', '.join(languages),
         date=date
     )
-    yield "    ]\n"
 
-    yield from bullet_printer(bullets)
-
-    yield "    \\end{resElement}\n"
+    if bullet_printer:
+        yield "    ]\n"
+        yield from bullet_printer(bullets)
+        yield "    \\end{resElement}\n"
 
 
 def project(*, name, role, start, end, bullets, languages, bullet_printer=_print_bullets):
@@ -100,7 +102,7 @@ def project(*, name, role, start, end, bullets, languages, bullet_printer=_print
     )
 
 
-def education(*, degree, school, start, end, coursework):
+def education(*, degree, school, start, end):
     yield from experience(
         company=school,
         title=degree,
@@ -108,7 +110,5 @@ def education(*, degree, school, start, end, coursework):
         end=end,
         bullets=[],
         languages=[],
-        bullet_printer=lambda x: _print_education_bullets(
-            degree, coursework
-        ),
+        bullet_printer=None
     )
