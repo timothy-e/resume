@@ -12,7 +12,7 @@ about:
       url: https://www.github.com/timothy-e
       display: github.com/timothy-e
 
-  tagline: Database Engineer
+  tagline: Software Developer
 
   education:
     degree:
@@ -40,12 +40,12 @@ qualifications:
 
 experience:
   - company: Yugabyte
-    title: Software Engineer
+    title: Senior Software Engineer
     start: September 2022
     end: Present
     bullets:
      - Designed and implemented remote filter pushdown between major Postgres versions, enabling fully online major version upgrades as part of a broader team effort
-     - Prototyped and delivered support for distributed bitmap scans, yielding up to 1000x speedups on some customer queries
+     - Prototyped and delivered support for distributed bitmap scans, yielding up to 1000x speedups on customer queries
      - Built a SQL view to expose abruptly terminated queries, enhancing system observability
      - Collaborated on the development of login profiles, improving security by enforcing login attempt limits
      - Refactored column target rules, decreasing response size by 25%
