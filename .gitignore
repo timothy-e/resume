@@ -6,4 +6,6 @@
 *.log
 *.out
 *.gz
+*.pyc
+*.DS_Store
 .vscode
