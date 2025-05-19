@@ -162,6 +162,19 @@ projects:
       - Designed and implemented scanning, parsing, analysis, and code generation in Scala
     languages:
       - Scala
+    hidden: True
+
+  - name: Soul Strength Network
+    role: Developer
+    start: April 2025
+    end: Present
+    bullets:
+      - Co-developed a therapist connection web platform in a team of 3 using Typescript and Next.js
+      - Designed and implemented RESTful endpoints to support therapist discovery and client management
+    languages:
+      - Next.js
+      - Typescript
+      - MongoDB
     hidden: False
 
   - name: Crop Companion
