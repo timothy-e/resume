@@ -45,12 +45,10 @@ experience:
     end: Present
     bullets:
      - Designed and implemented remote filter pushdown between major Postgres versions, enabling fully online major version upgrades as part of a broader team effort
-     - Prototyped and delivered support for distributed bitmap scans, yielding up to 1000x speedups on customer queries
-     - Built a SQL view to expose abruptly terminated queries, enhancing system observability
+     - Prototyped and delivered support for distributed bitmap scans, yielding up to 1000x speedups on enterprise customer queries in production
+    #  - Built a SQL view to expose abruptly terminated queries, enhancing system observability
      - Collaborated on the development of login profiles, improving security by enforcing login attempt limits
-     - Refactored column target rules, decreasing query response size by 25%
-     - Optimized memory tracking calls, reducing latencies by up to 60% for queries with large columns
-     - Redesigned memory allocation strategy, cutting memory usage by 60-95% on large writes
+     - Refactored and redesigned memory systems, decreasing query response size by 25%, reducing query latency by up to 60% for large-column workloads, and cutting memory usage by 60-95% on large writes
      - Implemented graceful recovery to mitigate the impact of the kernel's Out of Memory killer
      - Resolved multiple correctness issues in the query execution engine
      - Worked with customers to resolve improve modelling issues to maximize distributed SQL performance
@@ -58,6 +56,7 @@ experience:
       - C
       - C++
       - PostgreSQL
+      - Python
     hidden: False
 
   - company: Yugabyte
