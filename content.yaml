@@ -12,7 +12,7 @@ about:
       url: https://www.github.com/timothy-e
       display: github.com/timothy-e
 
-  tagline: Software Developer
+  tagline: Senior Software Developer
 
   education:
     degree:
@@ -29,9 +29,9 @@ qualifications:
     - Java
     - Kotlin
     - LaTeX
-    - Typescript
-    - Python
     - PostgreSQL
+    - Python
+    - Typescript
 
 experience:
   - company: Yugabyte
@@ -39,11 +39,14 @@ experience:
     start: September 2022
     end: Present
     bullets:
-     - Designed and implemented remote filter pushdown between major Postgres versions, enabling fully online major version upgrades as part of a broader team effort
-     - Prototyped and delivered support for distributed bitmap scans, yielding up to 1000x speedups on enterprise customer queries in production
+     - Independently designed and implemented remote filter pushdown between major Postgres versions, enabling fully online major version upgrades as part of a broader team effort
+     - Prototyped and delivered support for distributed bitmap scans, yielding up to 1000x speedups on enterprise customer queries in core workflows in production
     #  - Built a SQL view to expose abruptly terminated queries, enhancing system observability
      - Collaborated on the development of login profiles, improving security by enforcing login attempt limits
-     - Refactored and redesigned memory systems, decreasing query response size by 25%, reducing query latency by up to 60% for large-column workloads, and cutting memory usage by 60-95% on large writes
+    #  - Refactored and redesigned memory systems, decreasing query response size by 25%, reducing query latency by up to 60% for large-column workloads, and cutting memory usage by 60-95% on large writes
+     - Refactored column target rules, decreasing query response size by 25%
+     - Optimized memory tracking calls, reducing latencies by up to 60% for queries with large columns
+     - Redesigned memory allocation strategy, cutting memory usage by 60-95% on large writes
      - Implemented graceful recovery to mitigate the impact of the kernel's Out of Memory killer
      - Resolved multiple correctness issues in the query execution engine
      - Worked with customers to resolve improve modelling issues to maximize distributed SQL performance
@@ -55,7 +58,7 @@ experience:
     hidden: False
 
   - company: Yugabyte
-    title: Software Engineer Intern
+    title: Software Engineer
     start: September 2021
     end: December 2021
     bullets:
@@ -69,7 +72,7 @@ experience:
     hidden: False
 
   - company: Amazon
-    title: Software Developer Engineer Intern
+    title: Software Developer Engineer
     start: May 2021
     end: August 2021
     bullets:
@@ -81,7 +84,7 @@ experience:
     hidden: False
 
   - company: Huawei
-    title: Compiler Engineer Intern
+    title: Compiler Engineer
     start: September 2020
     end: December 2020
     bullets:
@@ -93,7 +96,7 @@ experience:
     hidden: True
 
   - company: Faire
-    title: Backend Developer Intern
+    title: Backend Developer
     start: January 2020
     end: April 2020
     bullets:
@@ -107,7 +110,7 @@ experience:
     hidden: False
 
   - company: Genesys
-    title: Software Developer Intern
+    title: Software Developer
     start: May 2019
     end: August 2019
     bullets:
@@ -120,7 +123,7 @@ experience:
     hidden: True
 
   - company: Encircle
-    title: Software Developer Intern
+    title: Software Developer
     start: September 2018
     end: December 2018
     bullets:
